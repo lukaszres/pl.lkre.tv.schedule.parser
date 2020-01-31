@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@master
       - run: mvn clean package
-#      - name: GitHub Action for Maven
-#        uses: LucaFeger/action-maven-cli@1.1.0
 
 
