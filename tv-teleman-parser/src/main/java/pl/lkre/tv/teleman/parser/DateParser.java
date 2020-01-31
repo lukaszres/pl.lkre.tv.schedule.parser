@@ -7,10 +7,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DateParser {
+
+    private static final Pattern DATE_PATTERN = Pattern.compile("/program-tv/stacje/.*\\?date=(\\d{4})-\\d{2}-\\d{2}&hour=-1");
+
     public static Date parse(Node node) throws ParseException {
         Date actual = generateDate(node);
         final Node previousSibling = node.previousSibling();
@@ -37,12 +39,6 @@ public class DateParser {
 
     private static String generateYear(Node node) {
         final String href = node.ownerDocument().select("div#date-slider-dates").first().childNode(1).attr("href");
-        final String pattern = "/program-tv/stacje/.*\\?date=(\\d{4})-\\d{2}-\\d{2}&hour=-1";
-        final Pattern pattern1 = Pattern.compile(pattern);
-        final Matcher matcher = pattern1.matcher(href);
-        if (matcher.matches()) {
-            return matcher.group(1);
-        }
-        return null;
+        return RegexParser.parse(href, DATE_PATTERN);
     }
 }
