@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: mvn clean package
+#      - name: GitHub Action for Maven
+#        uses: LucaFeger/action-maven-cli@1.1.0
+
+
