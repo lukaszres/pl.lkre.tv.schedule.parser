@@ -11,6 +11,7 @@
 
     <modules>
         <module>tv-schedule-model</module>
+        <module>tv-teleman-parser</module>
     </modules>
 
     <properties>
