@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>TVN - Aktualny Program TV</title>
+    <meta name="description" content="Program TV stacji TVN na 14 dni. Najwygodniejszy przewodnik po programie wszystkich stacji - tutaj sprawdź program telewizyjny TVN." />
+    <meta name="robots" content="NOODP" />
+    <meta property="fb:app_id" content="196985250356550" />
+    <meta property="fb:admins" content="100000013642551" />
+    <link rel="stylesheet" href="/static/css/base.css?v=1574263534" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" />
+    <link rel="apple-touch-icon" href="//static.teleman.pl/images/apple-touch-icon.png" sizes="114x114" />
+
+    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async="async"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var googletag = googletag || {cmd:[]};
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3119024-2', 'auto');
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+    </script>
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.teleman.pl/stations/TVN" /><script>
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/11952858/Teleman.pl_Station_Rectangles_Top_Left', [[300,250],[250,250],[200,200],'fluid'], 'div-gpt-ad-2525701-1').addService(googletag.pubads());
+        googletag.defineSlot('/11952858/Teleman.pl_Station_Rectangles_Top_Right', [[300,250],[250,250],[200,200],'fluid'], 'div-gpt-ad-2525701-2').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().setCentering(true);
+        googletag.enableServices();
+    });
+</script>
+</head>
+<body class="station ">
+
+<div id="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a id="site-logo" href="/" class="navbar-item" title="Teleman.pl - 14-dniowy Program TV dla 130 stacji">Teleman</a>
+
+
+            <div id="clock" class="navbar-item">08:08</div>
+            <script>
+                (function() {
+                    var clock = $('#clock');
+                    (function update_time() {
+                        var t = new Date();
+                        var h = '' + t.getHours();
+                        var m = '' + t.getMinutes();
+                        if (h.length < 2) {
+                            h = '0' + h;
+                        }
+                        if (m.length < 2) {
+                            m = '0' + m;
+                        }
+                        clock.html(h+'<span>:</span>'+m);
+                        setTimeout(update_time, 1000);
+                    })();
+                    (function toggle_colon() {
+                        clock.toggleClass('colon');
+                        setTimeout(toggle_colon, 1000);
+                    })();
+                })();
+            </script>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">Program TV</a>
+                <a id="main-menu-stations" class="navbar-item is-active" href="/program-tv/stacje">Stacje</a>
+                <a class="navbar-item" href="/teraz">Teraz w TV</a>
+                <a class="navbar-item new" href="/filmy">Filmy</a>
+                <a class="navbar-item" href="/sport">Sport</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <form id="search-form" action="/search">
+                        <div class="control has-icons-left">
+                            <input id="search-input" class="input nav-search" type="text" name="q" placeholder="Szukaj..." autocomplete="off" />
+                            <span class="icon is-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span>
+                        </div>
+                        <div id="search-suggestions" class="popup"></div>
+                    </form>
+                    <a href="/moje-stacje" class="button"><span class="icon icon-gear"></span><span>Ustawienia</span></a>
+
+                    <a href="/login" class="button"><span class="icon icon-login"></span><span>Zaloguj</span></a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="subheader">
+    <div class="container">
+        <div class="overflowHidden"><div id="stations-index"><div>0-9</div><a href="/program-tv/stacje/13-Ulica">13 Ulica</a><div>A</div><a href="/program-tv/stacje/Ale-Kino">ale kino+</a><a href="/program-tv/stacje/AMC">AMC</a><a href="/program-tv/stacje/Animal-Planet-HD">Animal Planet</a><a href="/program-tv/stacje/ATM-Rozrywka">ATM Rozrywka</a><a href="/program-tv/stacje/AXN">AXN</a><a href="/program-tv/stacje/AXN-Black">AXN Black</a><a href="/program-tv/stacje/AXN-Spin">AXN Spin</a><a href="/program-tv/stacje/AXN-White">AXN White</a><div>B</div><a href="/program-tv/stacje/BBC-Brit">BBC Brit</a><a href="/program-tv/stacje/BBC-Earth">BBC Earth</a><a href="/program-tv/stacje/BBC-First">BBC First</a><a href="/program-tv/stacje/BBC-Lifestyle">BBC Lifestyle</a><a href="/program-tv/stacje/Boomerang">Boomerang</a><div>C</div><a href="/program-tv/stacje/CanalPlus">CANAL+</a><a href="/program-tv/stacje/CanalPlus-1">CANAL+ 1</a><a href="/program-tv/stacje/CanalPlus-4K" class="new">CANAL+ 4K</a><a href="/program-tv/stacje/CanalPlus-Dokument">CANAL+ Dokument</a><a href="/program-tv/stacje/CanalPlus-Family">CANAL+ Family</a><a href="/program-tv/stacje/CanalPlus-Film">CANAL+ Film</a><a href="/program-tv/stacje/CanalPlus-Seriale">CANAL+ Seriale</a><a href="/program-tv/stacje/CanalPlus-Sport">CANAL+ Sport</a><a href="/program-tv/stacje/CanalPlus-Sport-2">CANAL+ Sport 2</a><a href="/program-tv/stacje/CanalPlus-Sport-3">CANAL+ Sport 3</a><a href="/program-tv/stacje/CanalPlus-Sport-4">CANAL+ Sport 4</a><a href="/program-tv/stacje/Cartoon-Network">Cartoon Network</a><a href="/program-tv/stacje/CBS-Europa">CBS Europa</a><a href="/program-tv/stacje/CBS-Reality">CBS Reality</a><a href="/program-tv/stacje/Crime-Investigation-Network">CI Polsat</a><a href="/program-tv/stacje/Cinemax">Cinemax</a><a href="/program-tv/stacje/Cinemax2">Cinemax 2</a><a href="/program-tv/stacje/Comedy-Central">Comedy Central</a><a href="/program-tv/stacje/Comedy-Central-Family">Comedy Central Fam.</a><div>D</div><a href="/program-tv/stacje/Discovery-Channel">Discovery Channel</a><a href="/program-tv/stacje/Discovery-Historia">Discovery Historia</a><a href="/program-tv/stacje/Discovery-Life">Discovery Life</a><a href="/program-tv/stacje/Discovery-Science">Discovery Science</a><a href="/program-tv/stacje/Disney-Channel">Disney Channel</a><a href="/program-tv/stacje/Disney-Junior">Disney Junior</a><a href="/program-tv/stacje/Disney-XD">Disney XD</a><a href="/program-tv/stacje/Domo">Domo+</a><a href="/program-tv/stacje/DTX">DTX</a><div>E</div><a href="/program-tv/stacje/Eleven-Sports-1">Eleven Sports 1</a><a href="/program-tv/stacje/Eleven-Sports-2">Eleven Sports 2</a><a href="/program-tv/stacje/Eleven-Sports-3">Eleven Sports 3</a><a href="/program-tv/stacje/Eleven-4">Eleven Sports 4</a><a href="/program-tv/stacje/Epic-Drama">Epic Drama</a><a href="/program-tv/stacje/Eurosport">Eurosport 1</a><a href="/program-tv/stacje/Eurosport-2">Eurosport 2</a><a href="/program-tv/stacje/Extreme">Extreme</a><div>F</div><a href="/program-tv/stacje/Filmbox-Action">Filmbox Action</a><a href="/program-tv/stacje/FilmBox-Arthouse">FilmBox Arthouse</a><a href="/program-tv/stacje/Filmbox-Extra-HD">FilmBox Extra HD</a><a href="/program-tv/stacje/Filmbox-Family">FilmBox Family</a><a href="/program-tv/stacje/Filmbox-Premium">FilmBox Premium HD</a><a href="/program-tv/stacje/Fokus-TV">Fokus TV</a><a href="/program-tv/stacje/Food-Network">Food Network</a><a href="/program-tv/stacje/FOX">FOX</a><a href="/program-tv/stacje/FOX-Comedy">FOX Comedy</a><div>H</div><a href="/program-tv/stacje/HBO">HBO</a><a href="/program-tv/stacje/HBO2">HBO 2</a><a href="/program-tv/stacje/HBO3">HBO 3</a><a href="/program-tv/stacje/HGTV">HGTV</a><a href="/program-tv/stacje/History">HISTORY</a><a href="/program-tv/stacje/H2">HISTORY 2</a><div>I</div><a href="/program-tv/stacje/ID">ID</a><div>K</div><a href="/program-tv/stacje/Kino-Polska">Kino Polska</a><a href="/program-tv/stacje/Kino%20TV">Kino TV</a><a href="/program-tv/stacje/Kuchnia-TV">Kuchnia+</a><div>M</div><a href="/program-tv/stacje/Metro-TV">Metro TV</a><a href="/program-tv/stacje/Mezzo">Mezzo</a><a href="/program-tv/stacje/MiniMini">MiniMini+</a><a href="/program-tv/stacje/MTV-Polska">MTV Polska</a><div>N</div><a href="/program-tv/stacje/Nat-Geo-People">Nat Geo People</a><a href="/program-tv/stacje/National-Geographic">National Geo.</a><a href="/program-tv/stacje/Nat-Geo-Wild">Nat. Geo. Wild</a><a href="/program-tv/stacje/Nickelodeon">Nickelodeon</a><a href="/program-tv/stacje/Nicktoons">Nicktoons</a><a href="/program-tv/stacje/Nowa-TV">Nowa TV</a><a href="/program-tv/stacje/nSport">nSport+</a><div>P</div><a href="/program-tv/stacje/Paramount-Channel">Paramount Channel</a><a href="/program-tv/stacje/Planete">PLANETE+</a><a href="/program-tv/stacje/Polonia-1">Polonia 1</a><a href="/program-tv/stacje/Polsat">Polsat</a><a href="/program-tv/stacje/Polsat-2">Polsat 2</a><a href="/program-tv/stacje/Polsat-Cafe">Polsat Cafe</a><a href="/program-tv/stacje/Polsat-Doku">Polsat Doku</a><a href="/program-tv/stacje/Polsat-Film">Polsat Film</a><a href="/program-tv/stacje/Polsat-Games">Polsat Games</a><a href="/program-tv/stacje/Polsat-News">Polsat News</a><a href="/program-tv/stacje/Polsat-Play">Polsat Play</a><a href="/program-tv/stacje/Polsat-Rodzina">Polsat Rodzina</a><a href="/program-tv/stacje/Polsat-Romans">Polsat Romans</a><a href="/program-tv/stacje/Polsat-Sport">Polsat Sport</a><a href="/program-tv/stacje/Polsat-Sport-Extra">Polsat Sport Extra</a><a href="/program-tv/stacje/Polsat-Sport-Fight">Polsat Sport Fight</a><a href="/program-tv/stacje/Polsat-Sport-News">Polsat Sport News</a><a href="/program-tv/stacje/Polsat-Sport-Premium-1">Polsat Sport Premium 1</a><a href="/program-tv/stacje/Polsat-Sport-Premium-2">Polsat Sport Premium 2</a><a href="/program-tv/stacje/Viasat-Explorer">Polsat Viasat Expl.</a><a href="/program-tv/stacje/Viasat-History">Polsat Viasat Hist.</a><a href="/program-tv/stacje/Viasat-Nature">Polsat Viasat Nature</a><div>R</div><a href="/program-tv/stacje/Romance-TV">Romance TV</a><div>S</div><a href="/program-tv/stacje/SCI-FI">SCI FI</a><a href="/program-tv/stacje/SportKlub">SportKlub</a><a href="/program-tv/stacje/Stopklatka-TV">Stopklatka</a><a href="/program-tv/stacje/Sundance-Channel-HD">Sundance TV</a><a href="/program-tv/stacje/Super-Polsat">Super Polsat</a><a href="/program-tv/stacje/Superstacja">Superstacja</a><div>T</div><a href="/program-tv/stacje/Tele-5">Tele 5</a><a href="/program-tv/stacje/TLC">TLC</a><a href="/program-tv/stacje/TNT">TNT</a><a href="/program-tv/stacje/Travel-Channel">Travel</a><a href="/program-tv/stacje/TTV">TTV</a><a href="/program-tv/stacje/TV4">TV 4</a><a href="/program-tv/stacje/TV6">TV 6</a><a href="/program-tv/stacje/Puls">TV Puls</a><a href="/program-tv/stacje/Puls-2">TV Puls 2</a><a href="/program-tv/stacje/TV-Republika">TV Republika</a><a href="/program-tv/stacje/TV-Trwam">TV Trwam</a><a href="/program-tv/stacje/TVN">TVN</a><a href="/program-tv/stacje/TVN-Siedem">TVN 7</a><a href="/program-tv/stacje/TVN-Fabula">TVN Fabuła</a><a href="/program-tv/stacje/TVN-Style">TVN Style</a><a href="/program-tv/stacje/TVN-Turbo">TVN Turbo</a><a href="/program-tv/stacje/TVN24">TVN24</a><a href="/program-tv/stacje/TVN-24-Biznes-i-Swiat">TVN24 BiS</a><a href="/program-tv/stacje/TVP-1">TVP 1</a><a href="/program-tv/stacje/TVP-2">TVP 2</a><a href="/program-tv/stacje/TVP-ABC">TVP ABC</a><a href="/program-tv/stacje/TVP-HD">TVP HD</a><a href="/program-tv/stacje/TVP-Historia">TVP Historia</a><a href="/program-tv/stacje/TVP-Info">TVP Info</a><a href="/program-tv/stacje/TVP-Kultura">TVP Kultura</a><a href="/program-tv/stacje/TVP-Polonia">TVP Polonia</a><a href="/program-tv/stacje/TVP-Rozrywka">TVP Rozrywka</a><a href="/program-tv/stacje/TVP-Seriale">TVP Seriale</a><a href="/program-tv/stacje/TVP-Sport">TVP Sport</a><a href="/program-tv/stacje/TVS">TVS</a><div>W</div><a href="/program-tv/stacje/WP">WP</a><div>Z</div><a href="/program-tv/stacje/Zoom-TV">Zoom TV</a><div id="stations-index-close" title="Zamknij" onclick="$('#main-menu-stations').click()"></div></div></div>
+
+    </div>
+</div>
+
+
+
+<div id="content" class="container">
+
+    <div id="stations-sidebar">
+        <h3>Lista stacji</h3>
+        <div class="stations-sidebar-cols">
+
+            <div>
+
+                <div class="stations-sidebar-group" data-group-id="13">
+                    <h4>Popularne</h4>
+
+                    <a href="/program-tv/stacje/TVP-1?hour=-1" title="TVP 1">TVP 1</a>
+
+                    <a href="/program-tv/stacje/TVP-2?hour=-1" title="TVP 2">TVP 2</a>
+
+                    <a href="/program-tv/stacje/Polsat?hour=-1" title="Polsat">Polsat</a>
+
+                    <a href="/program-tv/stacje/TVN?hour=-1" title="TVN" class="is-active">TVN</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="1">
+                    <h4>Ogólnotematyczne</h4>
+
+                    <a href="/program-tv/stacje/Metro-TV?hour=-1" title="Metro TV">Metro TV</a>
+
+                    <a href="/program-tv/stacje/Nowa-TV?hour=-1" title="Nowa TV">Nowa TV</a>
+
+                    <a href="/program-tv/stacje/Polonia-1?hour=-1" title="Polonia 1">Polonia 1</a>
+
+                    <a href="/program-tv/stacje/Polsat-2?hour=-1" title="Polsat 2">Polsat 2</a>
+
+                    <a href="/program-tv/stacje/Super-Polsat?hour=-1" title="Super Polsat">Super Polsat</a>
+
+                    <a href="/program-tv/stacje/Tele-5?hour=-1" title="Tele 5">Tele 5</a>
+
+                    <a href="/program-tv/stacje/TV4?hour=-1" title="TV 4">TV 4</a>
+
+                    <a href="/program-tv/stacje/TV6?hour=-1" title="TV 6">TV 6</a>
+
+                    <a href="/program-tv/stacje/Puls?hour=-1" title="TV Puls">TV Puls</a>
+
+                    <a href="/program-tv/stacje/Puls-2?hour=-1" title="TV Puls 2">TV Puls 2</a>
+
+                    <a href="/program-tv/stacje/TVN-Siedem?hour=-1" title="TVN 7">TVN 7</a>
+
+                    <a href="/program-tv/stacje/TVP-HD?hour=-1" title="TVP HD">TVP HD</a>
+
+                    <a href="/program-tv/stacje/TVP-Kultura?hour=-1" title="TVP Kultura">TVP Kultura</a>
+
+                    <a href="/program-tv/stacje/TVP-Polonia?hour=-1" title="TVP Polonia">TVP Polonia</a>
+
+                    <a href="/program-tv/stacje/TVS?hour=-1" title="TVS">TVS</a>
+
+                    <a href="/program-tv/stacje/WP?hour=-1" title="WP">WP</a>
+
+                    <a href="/program-tv/stacje/Zoom-TV?hour=-1" title="Zoom TV">Zoom TV</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="4">
+                    <h4>Sportowe</h4>
+
+                    <a href="/program-tv/stacje/CanalPlus-Sport?hour=-1" title="CANAL+ Sport">CANAL+ Sport</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Sport-2?hour=-1" title="CANAL+ Sport 2">CANAL+ Sport 2</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Sport-3?hour=-1" title="CANAL+ Sport 3">CANAL+ Sport 3</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Sport-4?hour=-1" title="CANAL+ Sport 4">CANAL+ Sport 4</a>
+
+                    <a href="/program-tv/stacje/Eleven-Sports-1?hour=-1" title="Eleven Sports 1">Eleven Sports 1</a>
+
+                    <a href="/program-tv/stacje/Eleven-Sports-2?hour=-1" title="Eleven Sports 2">Eleven Sports 2</a>
+
+                    <a href="/program-tv/stacje/Eleven-Sports-3?hour=-1" title="Eleven Sports 3">Eleven Sports 3</a>
+
+                    <a href="/program-tv/stacje/Eleven-4?hour=-1" title="Eleven Sports 4">Eleven Sports 4</a>
+
+                    <a href="/program-tv/stacje/Eurosport?hour=-1" title="Eurosport 1">Eurosport 1</a>
+
+                    <a href="/program-tv/stacje/Eurosport-2?hour=-1" title="Eurosport 2">Eurosport 2</a>
+
+                    <a href="/program-tv/stacje/Extreme?hour=-1" title="Extreme">Extreme</a>
+
+                    <a href="/program-tv/stacje/nSport?hour=-1" title="nSport+">nSport+</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport?hour=-1" title="Polsat Sport">Polsat Sport</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport-Extra?hour=-1" title="Polsat Sport Extra">Polsat Sport Extra</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport-Fight?hour=-1" title="Polsat Sport Fight">Polsat Sport Fight</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport-News?hour=-1" title="Polsat Sport News">Polsat Sport News</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport-Premium-1?hour=-1" title="Polsat Sport Premium 1">Polsat Sport Premium 1</a>
+
+                    <a href="/program-tv/stacje/Polsat-Sport-Premium-2?hour=-1" title="Polsat Sport Premium 2">Polsat Sport Premium 2</a>
+
+                    <a href="/program-tv/stacje/SportKlub?hour=-1" title="SportKlub">SportKlub</a>
+
+                    <a href="/program-tv/stacje/TVP-Sport?hour=-1" title="TVP Sport">TVP Sport</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="5">
+                    <h4>Dokumentalne</h4>
+
+                    <a href="/program-tv/stacje/Animal-Planet-HD?hour=-1" title="Animal Planet">Animal Planet</a>
+
+                    <a href="/program-tv/stacje/BBC-Earth?hour=-1" title="BBC Earth">BBC Earth</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Dokument?hour=-1" title="CANAL+ Dokument">CANAL+ Dokument</a>
+
+                    <a href="/program-tv/stacje/CBS-Reality?hour=-1" title="CBS Reality">CBS Reality</a>
+
+                    <a href="/program-tv/stacje/Crime-Investigation-Network?hour=-1" title="CI Polsat">CI Polsat</a>
+
+                    <a href="/program-tv/stacje/Discovery-Channel?hour=-1" title="Discovery Channel">Discovery Channel</a>
+
+                    <a href="/program-tv/stacje/Discovery-Historia?hour=-1" title="Discovery Historia">Discovery Historia</a>
+
+                    <a href="/program-tv/stacje/Discovery-Life?hour=-1" title="Discovery Life">Discovery Life</a>
+
+                    <a href="/program-tv/stacje/Discovery-Science?hour=-1" title="Discovery Science">Discovery Science</a>
+
+                    <a href="/program-tv/stacje/DTX?hour=-1" title="DTX (d. Discovery Turbo Xtra)">DTX</a>
+
+                    <a href="/program-tv/stacje/Fokus-TV?hour=-1" title="Fokus TV">Fokus TV</a>
+
+                    <a href="/program-tv/stacje/History?hour=-1" title="HISTORY">HISTORY</a>
+
+                    <a href="/program-tv/stacje/H2?hour=-1" title="HISTORY 2">HISTORY 2</a>
+
+                    <a href="/program-tv/stacje/ID?hour=-1" title="ID">ID</a>
+
+                    <a href="/program-tv/stacje/Nat-Geo-People?hour=-1" title="Nat Geo People">Nat Geo People</a>
+
+                    <a href="/program-tv/stacje/National-Geographic?hour=-1" title="National Geographic">National Geo.</a>
+
+                    <a href="/program-tv/stacje/Nat-Geo-Wild?hour=-1" title="National Geographic Wild">Nat. Geo. Wild</a>
+
+                    <a href="/program-tv/stacje/Planete?hour=-1" title="PLANETE+">PLANETE+</a>
+
+                    <a href="/program-tv/stacje/Polsat-Doku?hour=-1" title="Polsat Doku">Polsat Doku</a>
+
+                    <a href="/program-tv/stacje/Viasat-Explorer?hour=-1" title="Polsat Viasat Explore">Polsat Viasat Expl.</a>
+
+                    <a href="/program-tv/stacje/Viasat-History?hour=-1" title="Polsat Viasat History">Polsat Viasat Hist.</a>
+
+                    <a href="/program-tv/stacje/Viasat-Nature?hour=-1" title="Polsat Viasat Nature">Polsat Viasat Nature</a>
+
+                    <a href="/program-tv/stacje/Travel-Channel?hour=-1" title="Travel">Travel</a>
+
+                    <a href="/program-tv/stacje/TVP-Historia?hour=-1" title="TVP Historia">TVP Historia</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="8">
+                    <h4>Dla dzieci</h4>
+
+                    <a href="/program-tv/stacje/Boomerang?hour=-1" title="Boomerang">Boomerang</a>
+
+                    <a href="/program-tv/stacje/Cartoon-Network?hour=-1" title="Cartoon Network">Cartoon Network</a>
+
+                    <a href="/program-tv/stacje/Disney-Channel?hour=-1" title="Disney Channel">Disney Channel</a>
+
+                    <a href="/program-tv/stacje/Disney-Junior?hour=-1" title="Disney Junior">Disney Junior</a>
+
+                    <a href="/program-tv/stacje/Disney-XD?hour=-1" title="Disney XD">Disney XD</a>
+
+                    <a href="/program-tv/stacje/MiniMini?hour=-1" title="MiniMini+">MiniMini+</a>
+
+                    <a href="/program-tv/stacje/Nickelodeon?hour=-1" title="Nickelodeon">Nickelodeon</a>
+
+                    <a href="/program-tv/stacje/Nicktoons?hour=-1" title="Nicktoons">Nicktoons</a>
+
+                    <a href="/program-tv/stacje/TVP-ABC?hour=-1" title="TVP ABC">TVP ABC</a>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="stations-sidebar-group" data-group-id="2">
+                    <h4>Filmowe</h4>
+
+                    <a href="/program-tv/stacje/13-Ulica?hour=-1" title="13 Ulica">13 Ulica</a>
+
+                    <a href="/program-tv/stacje/Ale-Kino?hour=-1" title="ale kino+">ale kino+</a>
+
+                    <a href="/program-tv/stacje/AMC?hour=-1" title="AMC">AMC</a>
+
+                    <a href="/program-tv/stacje/ATM-Rozrywka?hour=-1" title="ATM Rozrywka">ATM Rozrywka</a>
+
+                    <a href="/program-tv/stacje/AXN?hour=-1" title="AXN">AXN</a>
+
+                    <a href="/program-tv/stacje/AXN-Black?hour=-1" title="AXN Black">AXN Black</a>
+
+                    <a href="/program-tv/stacje/AXN-Spin?hour=-1" title="AXN Spin">AXN Spin</a>
+
+                    <a href="/program-tv/stacje/AXN-White?hour=-1" title="AXN White">AXN White</a>
+
+                    <a href="/program-tv/stacje/BBC-First?hour=-1" title="BBC First">BBC First</a>
+
+                    <a href="/program-tv/stacje/CanalPlus?hour=-1" title="CANAL+">CANAL+</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-1?hour=-1" title="CANAL+ 1">CANAL+ 1</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-4K?hour=-1" title="CANAL+ 4K Ultra HD" data-new="1">CANAL+ 4K</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Family?hour=-1" title="CANAL+ Family">CANAL+ Family</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Film?hour=-1" title="CANAL+ Film">CANAL+ Film</a>
+
+                    <a href="/program-tv/stacje/CanalPlus-Seriale?hour=-1" title="CANAL+ Seriale">CANAL+ Seriale</a>
+
+                    <a href="/program-tv/stacje/CBS-Europa?hour=-1" title="CBS Europa">CBS Europa</a>
+
+                    <a href="/program-tv/stacje/Cinemax?hour=-1" title="Cinemax">Cinemax</a>
+
+                    <a href="/program-tv/stacje/Cinemax2?hour=-1" title="Cinemax 2">Cinemax 2</a>
+
+                    <a href="/program-tv/stacje/Comedy-Central?hour=-1" title="Comedy Central">Comedy Central</a>
+
+                    <a href="/program-tv/stacje/Comedy-Central-Family?hour=-1" title="Comedy Central Family">Comedy Central Fam.</a>
+
+                    <a href="/program-tv/stacje/Epic-Drama?hour=-1" title="Epic Drama">Epic Drama</a>
+
+                    <a href="/program-tv/stacje/Filmbox-Action?hour=-1" title="Filmbox Action">Filmbox Action</a>
+
+                    <a href="/program-tv/stacje/FilmBox-Arthouse?hour=-1" title="FilmBox Arthouse">FilmBox Arthouse</a>
+
+                    <a href="/program-tv/stacje/Filmbox-Extra-HD?hour=-1" title="FilmBox Extra HD">FilmBox Extra HD</a>
+
+                    <a href="/program-tv/stacje/Filmbox-Family?hour=-1" title="FilmBox Family">FilmBox Family</a>
+
+                    <a href="/program-tv/stacje/Filmbox-Premium?hour=-1" title="FilmBox Premium HD">FilmBox Premium HD</a>
+
+                    <a href="/program-tv/stacje/FOX?hour=-1" title="FOX">FOX</a>
+
+                    <a href="/program-tv/stacje/FOX-Comedy?hour=-1" title="FOX Comedy">FOX Comedy</a>
+
+                    <a href="/program-tv/stacje/HBO?hour=-1" title="HBO">HBO</a>
+
+                    <a href="/program-tv/stacje/HBO2?hour=-1" title="HBO 2">HBO 2</a>
+
+                    <a href="/program-tv/stacje/HBO3?hour=-1" title="HBO 3">HBO 3</a>
+
+                    <a href="/program-tv/stacje/Kino-Polska?hour=-1" title="Kino Polska">Kino Polska</a>
+
+                    <a href="/program-tv/stacje/Kino%20TV?hour=-1" title="Kino TV">Kino TV</a>
+
+                    <a href="/program-tv/stacje/Paramount-Channel?hour=-1" title="Paramount Channel">Paramount Channel</a>
+
+                    <a href="/program-tv/stacje/Polsat-Film?hour=-1" title="Polsat Film">Polsat Film</a>
+
+                    <a href="/program-tv/stacje/Polsat-Romans?hour=-1" title="Polsat Romans">Polsat Romans</a>
+
+                    <a href="/program-tv/stacje/Romance-TV?hour=-1" title="Romance TV">Romance TV</a>
+
+                    <a href="/program-tv/stacje/SCI-FI?hour=-1" title="SCI FI">SCI FI</a>
+
+                    <a href="/program-tv/stacje/Stopklatka-TV?hour=-1" title="Stopklatka">Stopklatka</a>
+
+                    <a href="/program-tv/stacje/Sundance-Channel-HD?hour=-1" title="Sundance TV">Sundance TV</a>
+
+                    <a href="/program-tv/stacje/TNT?hour=-1" title="TNT">TNT</a>
+
+                    <a href="/program-tv/stacje/TVN-Fabula?hour=-1" title="TVN Fabuła">TVN Fabuła</a>
+
+                    <a href="/program-tv/stacje/TVP-Seriale?hour=-1" title="TVP Seriale">TVP Seriale</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="3">
+                    <h4>Informacyjne</h4>
+
+                    <a href="/program-tv/stacje/Polsat-News?hour=-1" title="Polsat News">Polsat News</a>
+
+                    <a href="/program-tv/stacje/Superstacja?hour=-1" title="Superstacja">Superstacja</a>
+
+                    <a href="/program-tv/stacje/TV-Republika?hour=-1" title="TV Republika">TV Republika</a>
+
+                    <a href="/program-tv/stacje/TVN24?hour=-1" title="TVN24">TVN24</a>
+
+                    <a href="/program-tv/stacje/TVN-24-Biznes-i-Swiat?hour=-1" title="TVN24 Biznes i Świat">TVN24 BiS</a>
+
+                    <a href="/program-tv/stacje/TVP-Info?hour=-1" title="TVP Info">TVP Info</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="6">
+                    <h4>Rozrywkowe i muzyczne</h4>
+
+                    <a href="/program-tv/stacje/BBC-Brit?hour=-1" title="BBC Brit">BBC Brit</a>
+
+                    <a href="/program-tv/stacje/Mezzo?hour=-1" title="Mezzo">Mezzo</a>
+
+                    <a href="/program-tv/stacje/MTV-Polska?hour=-1" title="MTV Polska">MTV Polska</a>
+
+                    <a href="/program-tv/stacje/TVP-Rozrywka?hour=-1" title="TVP Rozrywka">TVP Rozrywka</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="12">
+                    <h4>Lifestylowe</h4>
+
+                    <a href="/program-tv/stacje/BBC-Lifestyle?hour=-1" title="BBC Lifestyle">BBC Lifestyle</a>
+
+                    <a href="/program-tv/stacje/Domo?hour=-1" title="Domo+">Domo+</a>
+
+                    <a href="/program-tv/stacje/Food-Network?hour=-1" title="Food Network">Food Network</a>
+
+                    <a href="/program-tv/stacje/HGTV?hour=-1" title="HGTV">HGTV</a>
+
+                    <a href="/program-tv/stacje/Kuchnia-TV?hour=-1" title="Kuchnia+">Kuchnia+</a>
+
+                    <a href="/program-tv/stacje/Polsat-Cafe?hour=-1" title="Polsat Cafe">Polsat Cafe</a>
+
+                    <a href="/program-tv/stacje/Polsat-Games?hour=-1" title="Polsat Games">Polsat Games</a>
+
+                    <a href="/program-tv/stacje/Polsat-Play?hour=-1" title="Polsat Play">Polsat Play</a>
+
+                    <a href="/program-tv/stacje/Polsat-Rodzina?hour=-1" title="Polsat Rodzina">Polsat Rodzina</a>
+
+                    <a href="/program-tv/stacje/TLC?hour=-1" title="TLC">TLC</a>
+
+                    <a href="/program-tv/stacje/TTV?hour=-1" title="TTV">TTV</a>
+
+                    <a href="/program-tv/stacje/TVN-Style?hour=-1" title="TVN Style">TVN Style</a>
+
+                    <a href="/program-tv/stacje/TVN-Turbo?hour=-1" title="TVN Turbo">TVN Turbo</a>
+
+                </div>
+
+                <div class="stations-sidebar-group" data-group-id="7">
+                    <h4>Religijne</h4>
+
+                    <a href="/program-tv/stacje/TV-Trwam?hour=-1" title="TV Trwam">TV Trwam</a>
+
+                </div>
+
+            </div>
+
+        </div></div>
+
+    <div id="stationListing">
+        <div class="stationTitle">
+            <img src="//media.teleman.pl/logos/m/4.png?v=1572510600" alt="TVN" />
+            <h1>TVN</h1>
+
+            <a href="/moj-operator" class="station-number" title="Numer kanału na dekoderze DVB-T (telewizja naziemna): 5">5</a>
+
+        </div>
+
+        <div class="has-background-light" style="padding:1em">
+            <div id="time-selector" class="is-pulled-right" style="white-space:nowrap">
+                <div id="station-time-dropdown-button" onclick="$('#station-time-dropdown-menu').toggle();event.stopPropagation();return false" class="button select has-text-weight-semibold" title="Zmień porę dnia">CAŁY DZIEŃ</div>
+                <ul id="station-time-dropdown-menu" class="dropdown popup">
+                    <li class="selected"><a href="/program-tv/stacje/TVN?hour=-1">cały dzień</a></li>
+                    <li><a href="/program-tv/stacje/TVN">od teraz</a></li>
+                    <li><a href="/program-tv/stacje/TVN?hour=20">od 20:00</a></li>
+                </ul>
+            </div>
+            <div id="date-slider" data-position="1">
+                <a id="date-slider-prev" href="/archiwum/TVN"></a>
+                <div id="date-slider-dates">
+
+                    <a href="/program-tv/stacje/TVN?date=2020-01-30&amp;hour=-1"><strong>Wczoraj</strong><span>30.01</span></a>
+
+                    <a href="/program-tv/stacje/TVN?hour=-1" class="is-selected"><strong>Dziś</strong><span>31.01</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-01&amp;hour=-1"><strong>So</strong><span>1.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-02&amp;hour=-1"><strong>Nd</strong><span>2.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-03&amp;hour=-1"><strong>Pn</strong><span>3.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-04&amp;hour=-1"><strong>Wt</strong><span>4.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-05&amp;hour=-1"><strong>Śr</strong><span>5.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-06&amp;hour=-1"><strong>Cz</strong><span>6.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-07&amp;hour=-1"><strong>Pt</strong><span>7.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-08&amp;hour=-1"><strong>So</strong><span>8.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-09&amp;hour=-1"><strong>Nd</strong><span>9.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-10&amp;hour=-1"><strong>Pn</strong><span>10.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-11&amp;hour=-1"><strong>Wt</strong><span>11.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-12&amp;hour=-1"><strong>Śr</strong><span>12.02</span></a>
+
+                    <a href="/program-tv/stacje/TVN?date=2020-02-13&amp;hour=-1"><strong>Cz</strong><span>13.02</span></a>
+
+                </div>
+                <div id="date-slider-next"></div>
+            </div>
+        </div>
+        <ul class="stationItems"><li id="prog17472459" class="cat-dok with-photo"><a href="/tv/Uwaga-1960139"><img src="//media.teleman.pl/photos/crop-100x63/Uwaga-2018.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>4:50</em><div class="detail"><a href="/tv/Uwaga-1960139">Uwaga!</a><p class="genre">magazyn reporterów</p><p> Od 15 lat reporterzy &#39;Uwagi&#39; ujawniają sprawy, które wymagają interwencji. Tropią afery, korupcję czy niekompetencję, nagłaśniają ważne społecznie tematy. Pomagają...</p></div></li><li id="prog17472460" class="cat-xxx with-photo"><a href="/tv/Mango-226688"><img src="//media.teleman.pl/photos/crop-100x63/Telezakupy_Fp4oHyM.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>5:15</em><div class="detail"><a href="/tv/Mango-226688">Mango</a><p class="genre">telezakupy</p><p>W programie prezentowane są różnorodne produkty. Po zapoznaniu się z ofertą widzowie mogą telefonicznie zamówić wybrane towary.</p></div></li><li id="prog17472461" class="cat-roz with-photo"><a href="/tv/Kuchenne-Rewolucje-Czerwionka-Leszczyny-Helios-8-1740606"><img src="//media.teleman.pl/photos/crop-100x63/Kuchenne-Rewolucje-Gdynia-Restauracja-Granola-2018.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>6:20</em><div class="detail"><a href="/tv/Kuchenne-Rewolucje-Czerwionka-Leszczyny-Helios-8-1740606">Kuchenne rewolucje: Czerwionka-Leszczyny, Helios (8)</a><p class="genre">program rozrywkowy</p><p> Piotr sprezentował restaurację Helios żonie, która marzyła o własnym biznesie gastronomicznym. Nowa właścicielka zachowała personel i menu z daniami kuchni...</p></div></li><li class="ad" style="height:auto;min-height:90px"><div id="div-gpt-ad-2525701-1"><script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-2525701-1'); });
+        </script></div><div id="div-gpt-ad-2525701-2"><script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-2525701-2'); });
+        </script></div></li><li id="prog17472462" class="cat-xxx"><em>7:20</em><div class="detail"><a href="/tv/Doradca-Smaku-Slimaki-z-Pomidorami-i-Serem-Plesniowym-15-1948826">Doradca smaku: Ślimaki z pomidorami i serem pleśniowym (15)</a><p class="genre">magazyn kulinarny</p><p> Program kulinarny przeznaczony zarówno dla amatorów, jak i osób znających doskonale sztukę gotowania. Przepisy dla siebie odnajdą tu również amatorzy...</p></div></li><li id="prog17472463" class="cat-xxx with-photo"><a href="/tv/Dzien-Dobry-TVN-1960140"><img src="//media.teleman.pl/photos/crop-100x63/Dzien-Dobry-TVN-2019.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>7:30<span class="progress-bar progress-bar-20" title="trwa"></span></em><div class="detail"><a href="/tv/Dzien-Dobry-TVN-1960140">Dzień Dobry TVN</a><a href="https://pilot.wp.pl/tv?utm_source=teleman&utm_medium=desktop_baner&utm_campaign=stacja&utm_content=tvn#tvn" target="_blank" class="wp-pilot-button" title="Oglądaj darmową telewizję online na żywo" rel="nofollow" onclick="ga('send', 'event', 'wp-pilot', 'click', 'tvn', {nonInteraction: true});"></a>
+            <script>
+                ga('send', 'event', 'wp-pilot', 'view', {nonInteraction: true});
+            </script><p class="genre">magazyn</p><p> Program powstały z myślą o osobach, które przy porannej kawie lubią posłuchać informacji, porad i wywiadów. Do dobrze znanych dotychczasowych...</p></div></li><li id="prog17472464" class="cat-ser with-photo"><a href="/tv/Ukryta-Prawda-748-1964323"><img src="//media.teleman.pl/photos/crop-100x63/Ukryta-Prawda-2012.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>11:00</em><div class="detail"><a href="/tv/Ukryta-Prawda-748-1964323">Ukryta prawda (748)</a><p class="genre">serial paradokumentalny</p><p> W każdym odcinku zostanie przedstawiona jedna historia człowieka, który został oszukany przez bliskie mu osoby. Czasem sumienie bohaterów podpowiada im...</p></div></li><li id="prog17472465" class="cat-ser with-photo"><a href="/tv/Szkola-382-1587428"><img src="//media.teleman.pl/photos/crop-100x63/Szkola-2017.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>12:00</em><div class="detail"><a href="/tv/Szkola-382-1587428">Szkoła (382)</a><p class="genre">serial paradokumentalny</p><p> Gimnazjaliści Monika i Tomek zostają parą. Gdy pewnego dnia chłopak idzie na turniej z kolegami, zazdrosna dziewczyna wpada w szał....</p></div></li><li id="prog17472466" class="cat-ser with-photo"><a href="/tv/19-467-1940659"><img src="//media.teleman.pl/photos/crop-100x63/19-2019_FEsCKNf.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>13:00</em><div class="detail"><a href="/tv/19-467-1940659">19+ (467)</a><p class="genre">serial paradokumentalny</p><p> Losy znajomych, którzy zaczynają konfrontować się z wyzwaniami dorosłości. Rafał i Krzysiek próbują swoich sił na scenie muzycznej - są...</p></div></li><li id="prog17472467" class="cat-ser with-photo"><a href="/tv/19-468-1941223"><img src="//media.teleman.pl/photos/crop-100x63/19-2019_FEsCKNf.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>13:30</em><div class="detail"><a href="/tv/19-468-1941223">19+ (468)</a><p class="genre">serial paradokumentalny</p><p> Losy znajomych, którzy zaczynają konfrontować się z wyzwaniami dorosłości. Rafał i Krzysiek próbują swoich sił na scenie muzycznej - są...</p></div></li><li id="prog17472468" class="cat-ser with-photo"><a href="/tv/Detektywi-Synowa-356-1964762"><img src="//media.teleman.pl/photos/crop-100x63/Detektywi-Dziewczyna-z-Motylami-2008.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>14:00</em><div class="detail"><a href="/tv/Detektywi-Synowa-356-1964762">Detektywi: Synowa (356)</a><p class="genre">serial fabularno-dokumentalny</p><p>Marzena Fliegel i Maciek Friedek prowadzą biuro detektywistyczne, podejmując się trudnych spraw. Współpracuje z nimi Krzysztof Dziób.</p></div></li><li id="prog17472469" class="cat-ser with-photo"><a href="/tv/Detektywi-Ratujcie-Moja-Mame-357-1964763"><img src="//media.teleman.pl/photos/crop-100x63/Detektywi-Dziewczyna-z-Motylami-2008.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>14:30</em><div class="detail"><a href="/tv/Detektywi-Ratujcie-Moja-Mame-357-1964763">Detektywi: Ratujcie moją mamę (357)</a><p class="genre">serial fabularno-dokumentalny</p><p>Marzena Fliegel i Maciek Friedek prowadzą biuro detektywistyczne, podejmując się trudnych spraw. Współpracuje z nimi Krzysztof Dziób.</p></div></li><li id="prog17472470" class="cat-ser with-photo"><a href="/tv/Szpital-312-1444667"><img src="//media.teleman.pl/photos/crop-100x63/Szpital-2015-2016.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>15:00</em><div class="detail"><a href="/tv/Szpital-312-1444667">Szpital (312)</a><p class="genre">serial paradokumentalny</p><p> Historie osób trafiających na SOR. Lekarze nie tylko walczą o zdrowie i życie pacjentów, ale też mierzą się z ich...</p></div></li><li id="prog17472471" class="cat-ser with-photo"><a href="/tv/Szkola-383-1587903"><img src="//media.teleman.pl/photos/crop-100x63/Szkola-2017.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>16:00</em><div class="detail"><a href="/tv/Szkola-383-1587903">Szkoła (383)</a><p class="genre">serial paradokumentalny</p><p> Weronika nie umie zapanować nad złością. Jeden z napadów nagrywa jej koleżanka. Szantażuje nastolatkę. Mirek nie chce już robić w...</p></div></li><li id="prog17472472" class="cat-roz with-photo"><a href="/tv/Kuchenne-Rewolucje-Gdansk-Tawerna-Dominikanska-14-Ost-1850204"><img src="//media.teleman.pl/photos/crop-100x63/Kuchenne-Rewolucje-Dziki-Mlyn-Warszawa-2010.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>17:00</em><div class="detail"><a href="/tv/Kuchenne-Rewolucje-Gdansk-Tawerna-Dominikanska-14-Ost-1850204">Kuchenne rewolucje: Gdańsk, Tawerna Dominikańska (14-ost.)</a><p class="genre">program rozrywkowy</p><p> Magda Gessler odwiedza Tawernę Dominikańską w Gdańsku. Lokal z pozoru ekskluzywny, jest połączeniem stylu tawernianego, biesiadnego i dancingowego. Gessler proponuje...</p></div></li><li id="prog17472473" class="cat-ser with-photo"><a href="/tv/Ukryta-Prawda-749-1964764"><img src="//media.teleman.pl/photos/crop-100x63/Ukryta-Prawda-2012.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>18:00</em><div class="detail"><a href="/tv/Ukryta-Prawda-749-1964764">Ukryta prawda (749)</a><p class="genre">serial paradokumentalny</p><p> W każdym odcinku zostanie przedstawiona jedna historia człowieka, który został oszukany przez bliskie mu osoby. Czasem sumienie bohaterów podpowiada im...</p></div></li><li id="prog17472474" class="cat-xxx with-photo"><a href="/tv/Fakty-1706711"><img src="//media.teleman.pl/photos/crop-100x63/Fakty.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>19:00</em><div class="detail"><a href="/tv/Fakty-1706711">Fakty</a><p class="genre">magazyn informacyjny</p><p>Najważniejsze informacje o tym, co wydarzyło się mijającego dnia w kraju i za granicą. Program zawiera reporterskie relacje i komentarze.</p></div></li><li id="prog17472475" class="cat-spo with-photo"><a href="/tv/Sport-149043"><img src="//media.teleman.pl/photos/crop-100x63/Sport_liip9h2.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>19:35</em><div class="detail"><a href="/tv/Sport-149043">Sport</a><p class="genre">magazyn sportowy</p><p>Przegląd najważniejszych aktualnych wydarzeń sportowych ze szczególnym uwzględnieniem osiągnięć polskich zawodników.</p></div></li><li id="prog17472476" class="cat-xxx with-photo"><a href="/tv/Pogoda-972317"><img src="//media.teleman.pl/photos/crop-100x63/Prognoza-Pogody.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>19:45</em><div class="detail"><a href="/tv/Pogoda-972317">Pogoda</a><p class="genre">magazyn informacyjny</p><p>Informacje na temat warunków atmosferycznych w najbliższych dniach w Polsce i Europie.</p></div></li><li id="prog17472477" class="cat-xxx with-photo"><a href="/tv/Raport-Smogowy-Poznaj-Kolory-Powietrza-1842302"><img src="//media.teleman.pl/photos/crop-100x63/Raport-Smogowy-Poznaj-Kolory-Powietrza.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>19:49</em><div class="detail"><a href="/tv/Raport-Smogowy-Poznaj-Kolory-Powietrza-1842302">Raport smogowy - poznaj kolory powietrza</a><p class="genre">program informacyjny</p><p>Twórcy programu omawiają stan jakości powietrza w poszczególnych miastach Polski w bieżącym dniu.</p></div></li><li id="prog17472478" class="cat-dok with-photo"><a href="/tv/Uwaga-1960139"><img src="//media.teleman.pl/photos/crop-100x63/Uwaga-2018.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>19:50</em><div class="detail"><a href="/tv/Uwaga-1960139">Uwaga!</a><p class="genre">magazyn reporterów</p><p> Od 15 lat reporterzy &#39;Uwagi&#39; ujawniają sprawy, które wymagają interwencji. Tropią afery, korupcję czy niekompetencję, nagłaśniają ważne społecznie tematy. Pomagają...</p></div></li><li id="prog17472479" class="cat-fil with-photo"><a href="/tv/Godzilla-1365713"><img src="//media.teleman.pl/photos/crop-100x63/Godzilla.jpeg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>20:00</em><div class="detail"><a href="/tv/Godzilla-1365713">Godzilla</a><p class="genre">film SF, Japonia/USA 2014</p><p>Tajemniczy potwór ucieka naukowcom. Ludziom grozi zagłada.</p></div></li><li id="prog17472480" class="cat-fil with-photo"><a href="/tv/Terminator-2-Dzien-Sadu-564825"><img src="//media.teleman.pl/photos/crop-100x63/Terminator-2-Dzien-Sadu-1991.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>22:40</em><div class="detail"><a href="/tv/Terminator-2-Dzien-Sadu-564825">Terminator 2: Dzień sądu</a><p class="genre">film SF, Francja/USA 1991</p><p>Jeden z najlepszych filmów akcji w historii światowego kina.</p></div></li><li id="prog17472481" class="cat-roz with-photo"><a href="/tv/Kuba-Wojewodzki-14-1847840"><img src="//media.teleman.pl/photos/crop-100x63/Kuba-Wojewodzki-2018_2tmSY1X.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>1:25</em><div class="detail"><a href="/tv/Kuba-Wojewodzki-14-1847840">Kuba Wojewódzki (14)</a><p class="genre">talk-show</p><p> Wywiady z osobami z pierwszych stron gazet, pełne zabawnych anegdot i żartów. Na kanapie zasiądą aktorzy, muzycy, sportowcy oraz politycy....</p></div></li><li id="prog17472482" class="cat-roz with-photo"><a href="/tv/Kuchenne-Rewolucje-Lodz-Wloszczyzna-6-1798949"><img src="//media.teleman.pl/photos/crop-100x63/Kuchenne-Rewolucje-Czestochowa-Sjesta-2018.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>2:25</em><div class="detail"><a href="/tv/Kuchenne-Rewolucje-Lodz-Wloszczyzna-6-1798949">Kuchenne rewolucje: Łódź, Włoszczyzna (6)</a><p class="genre">program rozrywkowy</p><p> Łódzką restaurację Włoszczyzna prowadzą Emilia i Francesco. Własny lokal był marzeniem Polki. Mimo korzystnej lokalizacji oraz prawdziwej kuchni prosto z...</p></div></li><li id="prog17472483" class="cat-dok with-photo"><a href="/tv/Uwaga-1960139"><img src="//media.teleman.pl/photos/crop-100x63/Uwaga-2018.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>3:25</em><div class="detail"><a href="/tv/Uwaga-1960139">Uwaga!</a><p class="genre">magazyn reporterów</p><p> Od 15 lat reporterzy &#39;Uwagi&#39; ujawniają sprawy, które wymagają interwencji. Tropią afery, korupcję czy niekompetencję, nagłaśniają ważne społecznie tematy. Pomagają...</p></div></li><li id="prog17472484" class="cat-roz with-photo"><a href="/tv/NOC-Magii-1893769"><img src="//media.teleman.pl/photos/crop-100x63/Moc-Magii.jpg" width="100" height="63" alt="zdjęcie" class="photo" /></a><em>3:45</em><div class="detail"><a href="/tv/NOC-Magii-1893769">NOC Magii</a><p class="genre">interaktywny program rozrywkowy</p><p>Nocny program interaktywny, w którym wróżki odpowiadają na pytania widzów dotyczące ich przyszłości.</p></div></li></ul><dl class="cat-legend"><dt>LEGENDA:</dt><dd class="cat-fil">FILMY</dd><dd class="cat-ser">SERIALE</dd><dd class="cat-roz">ROZRYWKA</dd><dd class="cat-spo">SPORT</dd><dd class="cat-dok">DOKUMENT</dd><dd class="cat-dzi">DLA DZIECI</dd></dl>
+
+
+    </div>
+
+</div>
+<div id="end" class="clear"></div>
+
+<div id="footer"><ul><li><a href="/redakcja">Redakcja</a></li><li><a href="/reklama">Reklama</a></li><li><a href="/archiwum">Archiwum</a></li><li><a href="/sugestia">Prześlij opinię</a></li></ul><div>&copy; 2007-2020 Teleman.pl / Traffiqua s.j.<br>
+    Teleman.pl to internetowy przewodnik po programie TV. Znajdziesz tu m.in. program TVP, TVN, Polsat oraz ponad 120 innych stacji TV.<br>
+    Dzięki plikom cookie nasz serwis może działać lepiej. Korzystając z niego zgadzasz się na ich użycie. <a href="/privacy">Zobacz szczegóły</a><br>
+    Dane o programie TV dostarcza AKPA Polska Press.
+</div>
+
+    <script>
+        $('.popup').click(function(e) {
+            e.stopPropagation();
+        });
+
+        $(document).click(function() {
+            $('.popup').hide();
+        });
+
+        $('#main-menu-stations').click(function() {
+            $('#stations-index').toggle();
+            $('#main-menu-stations').toggleClass('open');
+            $('#suggestions').toggle();
+            return false;
+        });
+    </script>
+    <script src="//static.teleman.pl/scripts/autosuggest.js?v3"></script>
+
+    <script>
+        $('#date-slider-prev').click(function() {
+            var pos = parseInt($('#date-slider').attr('data-position'));
+            if (pos > 0) {
+                pos -= 1;
+                $('#date-slider').attr('data-position', pos);
+                return false;
+            }
+        });
+
+        $('#date-slider-next').click(function() {
+            var pos = parseInt($('#date-slider').attr('data-position'));
+            if (pos < 2) {
+                pos += 1;
+                $('#date-slider').attr('data-position', pos);
+            }
+        });
+
+        $(document).ready(function() {
+            if (window.location.hash.indexOf('#prog') == 0) {
+                var prog = $(window.location.hash);
+                prog.css('background-color', '#ffc000');
+                setTimeout(function() {
+                    prog.css('transition', 'background-color 3s');
+                    prog.css('background-color', '#fff');
+                }, 100);
+            }
+        });
+    </script>
+    <script src="//static.teleman.pl/scripts/sticky-sidebar.js"></script>
+    <script>
+        (function() {
+            var sidebar = new StickySidebar('#stations-sidebar', {topSpacing: -26});
+        })();
+    </script>
+
+</body>
+</html>
