@@ -5,7 +5,7 @@ import lombok.Value;
 import java.util.List;
 
 @Value
-public class Channel {
+public class Station {
 
     private List<Seance> seances;
     private List<String> genres;
