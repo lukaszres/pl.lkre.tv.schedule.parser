@@ -1,8 +1,8 @@
 package pl.lkre.tv.teleman.parser;
 
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
 import org.junit.jupiter.api.Test;
+import pl.lkre.tv.teleman.NodeReader;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -17,8 +17,7 @@ class DateParserTest {
     @Test
     void shouldReturnCorrectDateFromPolsatFile() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(POLSAT);
-        final Node node = new HtmlParserImpl().parse(document).get(0);
+        final Node node = NodeReader.read(POLSAT, 0);
         //when
         final Date actual = DateParser.parse(node);
         final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
@@ -30,8 +29,7 @@ class DateParserTest {
     @Test
     void shouldReturnCorrectDateFromTVNFile() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(TVN);
-        final Node node = new HtmlParserImpl().parse(document).get(5);
+        final Node node = NodeReader.read(TVN, 5);
         //when
         final Date actual = DateParser.parse(node);
         final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
@@ -43,8 +41,7 @@ class DateParserTest {
     @Test
     void shouldReturnCorrectDateFromTVP1File() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(TVP_1);
-        final Node node = new HtmlParserImpl().parse(document).get(36);
+        final Node node = NodeReader.read(TVP_1, 36);
         //when
         final Date actual = DateParser.parse(node);
         final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")

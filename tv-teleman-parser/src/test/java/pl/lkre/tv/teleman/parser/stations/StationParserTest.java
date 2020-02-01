@@ -2,7 +2,7 @@ package pl.lkre.tv.teleman.parser.stations;
 
 import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.Test;
-import pl.lkre.tv.teleman.parser.HtmlFileReader;
+import pl.lkre.tv.teleman.HtmlFileReader;
 
 import java.io.IOException;
 import java.util.List;

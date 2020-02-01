@@ -2,14 +2,18 @@ package pl.lkre.tv.teleman.parser;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
-import pl.lkre.tv.teleman.HtmlParser;
+import pl.lkre.tv.schedule.model.Seance;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class HtmlParserImpl implements HtmlParser {
-    @Override
-    public List<Node> parse(Document document) {
+public class DocumentParser {
+
+    public List<Seance> parse(Document document) {
+        return buildSeances(buildNodes(document));
+    }
+
+    private List<Node> buildNodes(Document document) {
         return document
                 .childNode(1)
                 .childNode(2)
@@ -19,6 +23,13 @@ public class HtmlParserImpl implements HtmlParser {
                 .childNodes()
                 .stream()
                 .filter(o -> !"ad".equals(o.attr("class")))
+                .collect(Collectors.toList());
+    }
+
+    private List<Seance> buildSeances(List<Node> nodes) {
+        return nodes
+                .stream()
+                .map(SeanceParser::parse)
                 .collect(Collectors.toList());
     }
 }

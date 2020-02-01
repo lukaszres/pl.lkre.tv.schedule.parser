@@ -1,9 +1,9 @@
 package pl.lkre.tv.teleman.parser;
 
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Node;
 import org.junit.jupiter.api.Test;
 import pl.lkre.tv.schedule.model.Seance;
+import pl.lkre.tv.teleman.NodeReader;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -17,13 +17,10 @@ class SeanceParserTest {
     @Test
     void shouldReturnSeanceDiscoGramy() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(POLSAT);
-        final Node node = new HtmlParserImpl().parse(document).get(0);
-
-        final SeanceParser seanceParser = new SeanceParser(node);
+        final Node node = NodeReader.read(POLSAT, 0);
 
         //when
-        final Seance actual = seanceParser.parse();
+        final Seance actual = SeanceParser.parse(node);
         final Seance expect = new Seance(
                 "Disco Gramy"
                 , new SimpleDateFormat("yyyy.MM.dd h:mm").parse("2020.01.31 4:55")
@@ -41,13 +38,10 @@ class SeanceParserTest {
     @Test
     void shouldReturnSeanceTerminator2() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(TVN);
-        final Node node = new HtmlParserImpl().parse(document).get(21);
-
-        final SeanceParser seanceParser = new SeanceParser(node);
+        final Node node = NodeReader.read(TVN, 21);
 
         //when
-        final Seance actual = seanceParser.parse();
+        final Seance actual = SeanceParser.parse(node);
         final Seance expect = new Seance(
                 "Terminator 2: Dzień sądu"
                 , new SimpleDateFormat("yyyy.MM.dd h:mm").parse("2020.01.31 22:40")
@@ -65,13 +59,10 @@ class SeanceParserTest {
     @Test
     void shouldReturnSeanceKompaniaX() throws IOException, ParseException {
         //given
-        final Document document = HtmlFileReader.read(TVP_1);
-        final Node node = new HtmlParserImpl().parse(document).get(37);
-
-        final SeanceParser seanceParser = new SeanceParser(node);
+        final Node node = NodeReader.read(TVP_1, 37);
 
         //when
-        final Seance actual = seanceParser.parse();
+        final Seance actual = SeanceParser.parse(node);
         final Seance expect = new Seance(
                 "Kompania X 3"
                 , new SimpleDateFormat("yyyy.MM.dd h:mm").parse("2020.01.31 1:50")
