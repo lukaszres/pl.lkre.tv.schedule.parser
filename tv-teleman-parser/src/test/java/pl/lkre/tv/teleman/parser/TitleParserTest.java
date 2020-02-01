@@ -55,4 +55,15 @@ class TitleParserTest {
         //then
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    void ShouldReturnOnlyKompaniaX3() {
+        //given
+        final String expected = "Kompania X 3";
+        //when
+        final String actual = TitleParser.parse("Kompania X 3 (1/10)");
+        //then
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
