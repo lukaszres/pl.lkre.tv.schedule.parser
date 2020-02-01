@@ -48,7 +48,7 @@ class DateParserTest {
         //when
         final Date actual = DateParser.parse(node);
         final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
-                .parse("2020.02.01 0:55");
+                .parse("2020.01.31 0:55");
         //then
         assertThat(actual).isEqualTo(expected);
     }
