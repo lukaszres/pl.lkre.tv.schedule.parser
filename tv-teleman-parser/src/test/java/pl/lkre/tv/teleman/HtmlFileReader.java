@@ -5,6 +5,7 @@ import org.jsoup.nodes.Document;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ public class HtmlFileReader {
         ClassLoader classLoader = HtmlFileReader.class.getClassLoader();
 
         File file = new File(Objects.requireNonNull(classLoader.getResource(fileName)).getFile());
-        String content = new String(Files.readAllBytes(file.toPath()));
+        String content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
 
         return Jsoup.parse(content);
     }
