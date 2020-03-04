@@ -1,5 +1,8 @@
 package pl.lkre.tv.schedule.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Setter;
 import lombok.Value;
 
 import java.text.DateFormat;
@@ -7,11 +10,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-@Value
+@Data
+@AllArgsConstructor
 public class Seance {
     public static final String SEPARATOR = " :: ";
 
     private String title;
+    @Setter
     private Date date;
     private String genre;
     private String episode;
