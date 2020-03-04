@@ -20,7 +20,7 @@ class DateParserTest {
         final Node node = NodeReader.read(POLSAT, 0);
         //when
         final Date actual = DateParser.parse(node);
-        final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
+        final Date expected = new SimpleDateFormat("yyyy.MM.dd H:mm")
                 .parse("2020.01.31 4:55");
         //then
         assertThat(actual).isEqualTo(expected);
@@ -32,7 +32,7 @@ class DateParserTest {
         final Node node = NodeReader.read(TVN, 5);
         //when
         final Date actual = DateParser.parse(node);
-        final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
+        final Date expected = new SimpleDateFormat("yyyy.MM.dd H:mm")
                 .parse("2020.01.31 11:00");
         //then
         assertThat(actual).isEqualTo(expected);
@@ -44,8 +44,19 @@ class DateParserTest {
         final Node node = NodeReader.read(TVP_1, 36);
         //when
         final Date actual = DateParser.parse(node);
-        final Date expected = new SimpleDateFormat("yyyy.MM.dd h:mm")
+        final Date expected = new SimpleDateFormat("yyyy.MM.dd H:mm")
                 .parse("2020.01.31 0:55");
+        //then
+        assertThat(actual).isEqualTo(expected);
+    }
+    @Test
+    void shouldReturnCorrectDateFromTVP1_15File() throws IOException, ParseException {
+        //given
+        final Node node = NodeReader.read(TVP_1, 15);
+        //when
+        final Date actual = DateParser.parse(node);
+        final Date expected = new SimpleDateFormat("yyyy.MM.dd H:mm")
+                .parse("2020.01.31 12:50");
         //then
         assertThat(actual).isEqualTo(expected);
     }

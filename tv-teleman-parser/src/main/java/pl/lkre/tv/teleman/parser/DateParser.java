@@ -22,7 +22,7 @@ public class DateParser {
         String year = generateYear(node);
         String date = dayMonth + "." + year;
         try {
-            return new SimpleDateFormat("dd.MM.yyyy h:mm")
+            return new SimpleDateFormat("dd.MM.yyyy H:mm")
                     .parse(date + " " + time);
         } catch (ParseException e) {
             return null;
