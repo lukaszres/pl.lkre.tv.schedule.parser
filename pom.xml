@@ -68,4 +68,13 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>corp1</id>
+            <name>Corporate Repository</name>
+            <url>https://maven.pkg.github.com/lukaszres/pl.lkre.tv.schedule.parser</url>
+        </repository>
+    </distributionManagement>
+
 </project>
