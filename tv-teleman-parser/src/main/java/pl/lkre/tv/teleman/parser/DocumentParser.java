@@ -14,10 +14,16 @@ public class DocumentParser {
     }
 
     private List<Node> buildNodes(Document document) {
-        return document
+        final Node body = document
                 .childNode(1)
-                .childNode(2)
-                .childNode(5)
+                .childNode(2);
+        final Node content = body
+                .childNodes()
+                .stream()
+                .filter(o -> o.attr("id").equals("content"))
+                .findFirst().get();
+
+        return content
                 .childNode(3)
                 .childNode(5)
                 .childNodes()
